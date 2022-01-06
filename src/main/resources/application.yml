@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8761}
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://download.kouleen.cn:8761/eureka}
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
+    ip-address: ${IP_ADDRESS:download.kouleen.cn}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
