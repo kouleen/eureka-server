@@ -6,11 +6,11 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_SERVER_URL:http://download.kouleen.cn:8761/eureka}
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka}
     register-with-eureka: false
   instance:
     prefer-ip-address: true
-    ip-address: ${IP_ADDRESS:download.kouleen.cn}
+    ip-address: ${IP_ADDRESS:localhost}
 management:
   endpoints:
     web:
